@@ -56,6 +56,7 @@ public class MailController implements Initializable {
 			Transport.send(message);
 			System.out.println("Done");
 			System.out.println(to.getText());
+			System.out.println(msg.getText());
 
 		} catch (MessagingException e) {
 			throw new RuntimeException(e);
@@ -65,7 +66,6 @@ public class MailController implements Initializable {
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		
 	}
 
 }

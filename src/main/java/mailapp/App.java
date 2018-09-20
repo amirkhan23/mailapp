@@ -16,7 +16,6 @@ public class App extends Application {
 	public void start(Stage primaryStage) throws Exception {
 
 		Parent root = FXMLLoader.load(getClass().getResource("/mailapp/Mail.fxml"));
-		
 		primaryStage.setTitle("The Notepad");
 		Scene scene = new Scene(root);
 		primaryStage.setScene(scene);
