@@ -42,14 +42,14 @@ public class MailController implements Initializable {
 
 		Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
 			protected PasswordAuthentication getPasswordAuthentication() {
-				return new PasswordAuthentication("amirk8161@gmail.com", "amir@khan");
+				return new PasswordAuthentication("mail_id", "Password");
 			}
 		});
 
 		try {
 
 			Message message = new MimeMessage(session);
-			message.setFrom(new InternetAddress("amirk8161@gmail.com"));
+			message.setFrom(new InternetAddress("mail_id"));
 			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(to.getText()));
 			message.setSubject(subject.getText());
 			message.setText(msg.getText());
